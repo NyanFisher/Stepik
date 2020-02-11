@@ -27,8 +27,16 @@ function get_slog()
 				result.push(word);
 			}
 			else if (indexes_vowel.length > 1)
-			{
-				slog = word.slice(0, indexes_vowel[0] + 1)
+			{	
+				if ((vowel_letters.indexOf(word_split[indexes_vowel[0] + 1]) == -1) && (vowel_letters.indexOf(word_split[indexes_vowel[0] + 2]) == -1))
+				{
+					slog = word.slice(0, indexes_vowel[0] + 2)				
+				}
+				else
+				{
+					slog = word.slice(0, indexes_vowel[0] + 1)
+				}
+				
 				result.push(slog)
 			}
 		})
