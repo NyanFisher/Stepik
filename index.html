@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>О себе</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<header>
+		<div id="top-bar">
+			<div class="container">
+				<nav id="top-menu">
+					<ul>
+						<li>
+							<a href="#about-me">О СЕБЕ</a>
+							<p>/</p>
+						</li>
+						<li>
+							<a href="#phone_section">ТЕЛЕФОН</a>
+							<p>/</p>
+						</li>
+						<li>
+							<a href="#function">ФУНКЦИЯ</a>
+							<p>/</p>
+						</li>
+						<li>
+							<a href="#information">КОНТАКТЫ</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="container">
+			<div id="about-me">
+				<div id="about-me_text">
+					<h2>О СЕБЕ</h2>
+					<p>
+						Всем привет! Меня зовут <a href="https://vk.com/nyanfisher" id="name"><b><i>Максим</i></b></a>! Я Web-разработчик. Живу в городе Челябинск.
+						В 2019 году закончил Высшую школу электроники и компьютерных наук в ЮУрГУ. Преимущественно занимаюсь разработкой backend части веб-приложений на языке Python. 	
+						Так же имею портфолио сверстанных страниц по макетам и написанный backend к ним.
+					</p>
+					
+				</div>
+				<img src="image/my_avatar.png" alt="Моя аватарка">
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div id="phone_section">
+				<p id="phone">+7 (912) 803-4490</p>
+				<button id="show_phone" onclick="show_phone()" title="Показать телефон">ТЕЛЕФОН</button>
+			</div>
+		</div>
+	</section>
+	<section id="function">
+		<div class="container">
+			<div id="function_words">
+				<p class="has-dynamic-label">
+					<input name="input_words" id="words" placeholder="Введите слова через запятую">
+					<label for="input_words">Введите слова через запятую</label>
+				</p>
+				<div style="text-align: center;">
+					<button class="btn" onclick="get_slog()">
+						НАЖМИ НА МЕНЯ
+					</button>
+				</div>
+				<p class="has-dynamic-label">
+					<input name="show_word" id="show_word" readonly="readonly">
+					<label for="show_word">Полученные слоги</label>
+				</p>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<div id="copyright">
+				<p>	
+					© 2020 NFCompany
+				</p>
+			</div>
+			<div id="information">
+				<p>Email: zaikinmaxv@gmail.com</p>
+				<p>Телефон: 
+					<a href="tel:+79128034490">+7 (912)-803-4490</a>
+				</p>
+			</div>
+		</div>
+	</footer>
+</body>
+
+<script  src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,230 @@
+
+body, html {
+	margin: 0;
+	padding: 0;
+	min-width: 1000px;
+	font-family: Palatino, URW Palladio L, serif;
+}
+section {
+	margin: 40px 0 0;
+}
+
+footer {
+	background-color: #313131;
+	overflow: hidden;
+}
+
+#top-bar {
+	overflow: hidden;
+	background-color: #313131; /*444c5a*/
+	padding: 15px 0;	
+	font-family: Montserrat,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Arial,sans-serif;
+}
+
+	#top-bar img {
+		max-height: 50px;
+		border-radius: 25px;
+		display: inline-block;
+	}
+
+	#top-menu {
+		float: right;
+	}
+
+		#top-menu,
+		#top-menu li,
+		#top-menu p {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+		}
+	
+		#top-menu ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		#top-menu a {
+			color: #ffffff;
+			text-decoration: none;
+			
+		}
+		#top-menu a:hover {
+			text-decoration: none;
+		}
+
+		#top-menu li:hover{
+			transform: scale(1.10);
+			transition:  0.2s;
+		}
+
+		#top-menu p {
+			color: #ffffff;
+			padding: 0 20px;
+			
+		}
+
+.container {
+	width: 906px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#about-me {
+	position: relative;
+	padding: 60px 0;
+	overflow: hidden;
+}
+
+	#about-me img {
+		display: inline-block;
+		max-height: 348px;
+		margin: 0 30px;
+		float: right;
+	    border: 26px solid #313131;  /* #536b84fa*/
+	    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+	}
+	#about-me img:hover {
+		transform: scale(1.01);
+		transition:  0.5s;
+	}
+
+	#about-me_text {
+		display: inline-block;
+		width: 360px;
+		height: 380px;
+		margin: 0 30px;
+		border: 10px solid #313131;
+		float: left;
+		text-align: justify;
+		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		background-color: #f1f2f4;
+
+	}
+
+		#about-me_text h2 {
+			color: #3a4a5a;
+			text-align: center;
+			padding-top: 5px;
+			font-family: Trebuchet MS, sans-serif;
+		}
+
+		#about-me_text p {
+		    margin: 29px 20px;
+    		font-size: 20px;
+			font-family: Roboto;
+		}
+
+		#about-me_text #phone,
+		#about-me_text #show_phone {
+			position: absolute;
+		}
+		#phone {
+			display: none;
+			bottom: 60px;
+			left: 100px;
+		}
+		#about-me_text #show_phone {
+			bottom: 60px;
+			right: 50px;
+		}
+
+#function_words {
+	padding: 30px 255px;	
+}
+
+#show_phone {
+    padding: 20px 10px;
+    border: 0px solid #536b84fa;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 201px;
+    font-size: 19px;
+ 	letter-spacing: 2px;
+}
+#show_phone:hover {
+		transform: scale(1.1);
+		letter-spacing: 5px;
+		transition:  1s;
+}
+
+#phone_section {
+	height: 66px;
+	padding: 20px 0px;
+	text-align: center;
+}
+
+#phone {
+    font-size: 19px;
+ 	letter-spacing: 2px;
+}
+
+input:read-only {
+ 	color: var(--gray);
+ 	cursor: not-allowed;
+}
+input {
+	display: block;
+	height: 30px;
+	width: 382px;
+	padding: 5px;
+}
+
+
+input:placeholder-shown + label {
+    opacity: 0;
+    transform: translateY(1rem);
+}
+
+.has-dynamic-label {
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+.has-dynamic-label label {
+    position: absolute;
+    top: 0;
+    font-size: var(--font-size-small);
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+}
+
+.btn {
+    padding: 20px 30px;
+    border: 1px solid #313131;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-size: 14px;
+    letter-spacing: 2px;
+    background-color: #f1f2f4;
+}
+
+.btn:hover {
+	background-color: #dfe0e2;
+}
+
+#information {
+	float: right;
+	padding: 20px 30px;
+	color: #ffffff;
+	font-family: Montserrat,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Arial,sans-serif;
+}
+
+#information a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+#copyright {
+	float: left;
+	padding: 20px 30px;
+	color: #ffffff;
+	font-family: Montserrat,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Arial,sans-serif;
+}
+
+#name {
+	color: #000000;
+}
+
+#function {
+	background-color: #f1f2f4;
+}
