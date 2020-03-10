@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <body>
     <header class="header">
       <h1 class="visually-hidden">Сайт-визитка Заикина Максима</h1>
           <LinksHeaderUl
@@ -15,7 +15,7 @@
       />
       <CopyRight v-bind:copyright="copyright" />
     </footer>
-  </div>
+  </body>
 </template>
 
 <script>

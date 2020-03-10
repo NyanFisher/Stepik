@@ -28,6 +28,8 @@
 </style>
 
 <script>
+document.title='Телефон'
+
 export default {
   data() {
     return {
