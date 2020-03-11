@@ -1,28 +1,16 @@
 <template>
-    <div class="container clearfix footer-container">
-        <nav class="footer-nav">
-            <ul class="footer-nav__ul" >
-                <li class="footer-nav__li" v-for="link in router_links" :key="link.id">
-                    <router-link :to="link.href">{{link.title.toUpperCase()}}</router-link>
-                </li>
-            </ul>
-        </nav>
-        <address class="footer-contacts">
-            <ul class="footer-social__ul" >
-                <li class="footer-social_li" v-for="link in social_links" :key="link.id">
-                    <a class="empty-link" :href="link.href" :aria-label="link.aria_name" :class="link.class"></a>
-                </li>
-            </ul>
-            <ul class="footer-contacts__ul" >
-                <li class="footer-contacts_li" v-for="contact in contacts" :key="contact.id">
-                    <a :href="contact.href" :class='contact.class'>{{contact.title}}</a>
-                </li>
-            </ul>
-        </address>
+    <div class="container">
+        <div class="footer-container clearfix">
+            <LinksNav v-bind:links="links" class="footer-nav" />
+            <address class="footer-contacts">
+                <LinksUl v-bind:links="social_links" class="footer-social__ul"/>
+                <LinksUl v-bind:links="contacts" class="footer-contacts__ul"/>
+            </address>
+        </div>
     </div>
 </template>
 
-<style scoped>
+<style >
 .footer-container {
     margin-bottom: 50px;
 }
@@ -32,17 +20,17 @@
     margin-top: 0;
 }
 
-.footer-nav__ul {
+.footer-nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-.footer-nav__li { 
+.footer-nav li { 
     margin-top: 20px;
     margin-right: 0;
 }
 
-.footer-nav__li:first-child {
+.footer-nav li:first-child {
     margin: 0;
 }
 
@@ -55,7 +43,7 @@
     margin: 0;
     padding: 23px 0;
 }
-.footer-social_li {
+.footer-social__ul   li {
     display: inline-block;
     margin-right: 20px;
 }
@@ -87,7 +75,7 @@
     padding: 0;
 }
 
-.footer-contacts_li {
+.footer-contacts__ul li {
     margin-top: 15px;
     margin-right: 0;
 }
@@ -112,22 +100,27 @@
 </style>
 
 <script>
-
+import LinksNav from './LinksNav'
+import LinksUl from './LinksUl'
 export default {
-    props: ['router_links'],
+    props: ['links'],
     data() {
         return {
             social_links: [
-                {id: 1, href: 'https://vk.com/nyanfisher', class: 'vk', aria_name:'Я Вконтакте'},
-                {id: 2, href: 'https://www.facebook.com/NyanFIsher', class: 'facebook', aria_name:'Я в Фейсбукк'},
-                {id: 3, href: 'https://twitter.com/Nyan_Fisher', class: 'twitter', aria_name:'Я в Твиттере'},
-                {id: 4, href: 'https://www.instagram.com/nyanfisher/', class: 'instagram', aria_name:'Я в Инстаграме'},
+                {id: 1, href: 'https://vk.com/nyanfisher', class: 'vk empty-link', aria_name:'Я Вконтакте', social: true},
+                {id: 2, href: 'https://www.facebook.com/NyanFIsher', class: 'facebook empty-link', aria_name:'Я в Фейсбукк', social: true},
+                {id: 3, href: 'https://twitter.com/Nyan_Fisher', class: 'twitter empty-link', aria_name:'Я в Твиттере', social: true},
+                {id: 4, href: 'https://www.instagram.com/nyanfisher/', class: 'instagram empty-link', aria_name:'Я в Инстаграме', social: true},
             ],
             contacts: [
-                {id: 1, href: 'mailto:zaikinmaxv@gmail.com', title: 'zaikinmaxv@gmail.com', class: 'footer-email'},
-                {id: 2, href: 'tel:89128034490', title: '+7 (912)-803-4490', class: 'footer-phone'}
+                {id: 1, href: 'mailto:zaikinmaxv@gmail.com', title: 'zaikinmaxv@gmail.com', class: 'footer-email', contact: true},
+                {id: 2, href: 'tel:89128034490', title: '+7 (912)-803-4490', class: 'footer-phone', contact: true}
             ]
         }
+    },
+    components: {
+        LinksNav,
+        LinksUl
     }
 }
 </script>

@@ -4,9 +4,7 @@
     <div class="container phone-section">
       <p v-show="Phone.visible_phone" class="phone js-phone">{{Phone.phone}}</p>
       <button v-show="Phone.visible_but" 
-      v-on:click="
-        Phone.visible_but = !Phone.visible_but;
-        Phone.visible_phone = !Phone.visible_phone" class="phone_show js-phonebutton">
+      v-on:click="hideBut()" class="phone_show js-phonebutton">
         {{Phone.name}}
       </button>
     </div>
@@ -31,6 +29,12 @@
 document.title='Телефон'
 
 export default {
+  methods: {
+    hideBut() {
+      this.Phone.visible_but = false
+      this.Phone.visible_phone = true
+    }
+  },
   data() {
     return {
       Phone: {
