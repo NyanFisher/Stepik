@@ -12,7 +12,7 @@ new Vue({
   normalize,
   style,
   render: h => h(App)
-}).$mount('body')
+}).$mount('.app')
 
 
 

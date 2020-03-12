@@ -24,6 +24,9 @@
 
 <script>
 export default {
-    props: ['copyright']
+    name: "CopyRight",
+    props: {
+        copyright: String,
+    },
 }
 </script>

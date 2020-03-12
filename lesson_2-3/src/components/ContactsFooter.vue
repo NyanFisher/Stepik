@@ -10,7 +10,7 @@
     </div>
 </template>
 
-<style >
+<style>
 .footer-container {
     margin-bottom: 50px;
 }
@@ -103,7 +103,10 @@
 import LinksNav from './LinksNav'
 import LinksUl from './LinksUl'
 export default {
-    props: ['links'],
+    name: "ContactsFooter",
+    props: {
+        links: Array,
+    },
     data() {
         return {
             social_links: [
