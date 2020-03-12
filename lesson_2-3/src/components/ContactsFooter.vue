@@ -107,10 +107,10 @@ export default {
     data() {
         return {
             social_links: [
-                {id: 1, href: 'https://vk.com/nyanfisher', class: 'vk empty-link', aria_name:'Я Вконтакте', social: true},
-                {id: 2, href: 'https://www.facebook.com/NyanFIsher', class: 'facebook empty-link', aria_name:'Я в Фейсбукк', social: true},
-                {id: 3, href: 'https://twitter.com/Nyan_Fisher', class: 'twitter empty-link', aria_name:'Я в Твиттере', social: true},
-                {id: 4, href: 'https://www.instagram.com/nyanfisher/', class: 'instagram empty-link', aria_name:'Я в Инстаграме', social: true},
+                {id: 1, href: 'https://vk.com/nyanfisher', class: 'vk empty-link', aria_label:'Я Вконтакте', social: true},
+                {id: 2, href: 'https://www.facebook.com/NyanFIsher', class: 'facebook empty-link', aria_label:'Я в Фейсбукк', social: true},
+                {id: 3, href: 'https://twitter.com/Nyan_Fisher', class: 'twitter empty-link', aria_label:'Я в Твиттере', social: true},
+                {id: 4, href: 'https://www.instagram.com/nyanfisher/', class: 'instagram empty-link', aria_label:'Я в Инстаграме', social: true},
             ],
             contacts: [
                 {id: 1, href: 'mailto:zaikinmaxv@gmail.com', title: 'zaikinmaxv@gmail.com', class: 'footer-email', contact: true},

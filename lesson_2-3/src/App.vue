@@ -5,7 +5,7 @@
         <h1 class="visually-hidden">Сайт-визитка Заикина Максима</h1>
         <div class="checkbox-theme">
           <input type="checkbox" class="input_toogle" id="theme" name="theme" v-model="isNight">
-          <label for="theme" class="toggle"><span></span></label>
+          <label for="theme" class="toggle" :aria-label='isNight? "Тёмная тема" : "Светлая тема"'><span></span></label>
         </div>
         <Links v-bind:links="router_links" />
       </div>
